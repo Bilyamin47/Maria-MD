@@ -46,7 +46,7 @@
 
 
 ## ` Pair with WhatsApp`
-<h2 align="left">  <a href="https://replit.com/@theofficialbhar/AYUSH-PAIRING"><img src="https://repl.it/badge/github/quiec/whatsasena" />
+<h2 align="left">  <a href="https://maria-pair-code.onrender.com"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="90" />
 </a>
 </h2>
 
@@ -144,3 +144,11 @@ npm start
 npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 
 ```
+<br>
+<br>
+<h1 align="center">  🔮 Thanks To 🔮
+</h1>
+
+* [`🧧Xeon`](https://github.com/dgxeon)
+
+* [`🧧Pikachu`](https://github.com/PikaBotz)

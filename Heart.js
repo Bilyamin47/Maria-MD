@@ -601,15 +601,15 @@ break
                 reply(`Send Broadcast To ${anu.length} Group Chat, End Time ${anu.length * 1.5} second`)
                 for (let i of anu) {
                     await sleep(1500)
-                    let a = '```' + `\n\n${text}\n\n` + '```' + '\n\n\nʙʀᴏᴀᴅᴄᴀsᴛ'
+                    let a = '```' + `\n📒${text}\n\n` + '```' + '\n\n\nʙʀᴏᴀᴅᴄᴀsᴛ'
                     Maria.sendMessage(i, {
                         text: a,
                         contextInfo: {
                             externalAdReply: {
                                 showAdAttribution: true,
-                                title: 'Broadcast By Owner',
+                                title: '*🎐 Maria Broadcast 🎐*',
                                 body: `Sent ${i.length} Group`,
-                                thumbnailUrl: 'https://telegra.ph/file/c02035e9c30f7b6da1b29.jpg',
+                                thumbnailUrl: 'https://telegra.ph/file/3fd18ee11521117c7c882.jpg',
                                 sourceUrl: global.link,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -623,7 +623,7 @@ break
             case 'getcase':
                 if (!isCreator) return reply(mess.owner)
                 const getCase = (cases) => {
-                    return "case" + `'${cases}'` + fs.readFileSync("AyushBug3.js").toString().split('case \'' + cases + '\'')[1].split("break")[0] + "break"
+                    return "case" + `'${cases}'` + fs.readFileSync("heart.js").toString().split('case \'' + cases + '\'')[1].split("break")[0] + "break"
                 }
                 reply(`${getCase(q)}`)
                 break
@@ -1802,6 +1802,16 @@ case 'public': {
 │⊳ 💦  ${prefix}ass
 │⊳ 💦  ${prefix}trap
 │⊳ 💦  ${prefix}maal
+│⊳ 💦  ${prefix}ʀɪʙʙᴏɴꜱ
+│⊳ 💦  ${prefix}ʜᴀᴛꜱᴜɴᴇᴍɪᴋᴜ
+│⊳ 💦  ${prefix}ʜᴇᴀᴅʙᴀɴᴅ
+│⊳ 💦  ${prefix}ꜰᴏxɢɪʀʟ
+│⊳ 💦  ${prefix}ᴀɴɪᴍᴀʟᴇᴀʀꜱ
+│⊳ 💦  ${prefix}ʙʀᴀ
+│⊳ 💦  ${prefix}ꜱᴋɪʀᴛ
+│⊳ 💦  ${prefix}ʙʀᴇᴀꜱᴛꜱ
+│⊳ 💦  ${prefix}ᴛᴀᴛᴛᴏᴏ
+│⊳ 💦  ${prefix}ᴄʜᴀɪɴ
 └──────────⊰ 
 `
         Maria.sendMessage(m.chat, { image: { url: "./Gallery/nsfw.jpg" }, caption: nsfwmenu }, { quoted: m });
@@ -1836,7 +1846,24 @@ reply('Successfully deactivating nsfw mode in this group ✔️')
 🟢 *Use 'on' to enable and 'off' to disable.* 🔴`)
   }
   }
-  break     
+  break  
+  
+case 'chain':
+case 'tattoo':
+case 'breasts':
+case 'skirt':
+case 'bra':
+case 'animalears':
+case 'foxgirl':
+case 'headband':
+case 'hatsunemiku':
+case 'ribbons':
+    if (!m.isGroup) return reply(mess.group);
+    if (!isNsfw) return reply(mess.nsfw);
+    const waifpoudd = await axios.get(`https://fantox-apis.vercel.app/${command}`);
+    Maria.sendMessage(m.chat, { caption: 'OMG🥵', image: { url: waifpoudd.data.url } }, { quoted: m });
+    break;
+    
         case 'blowjob':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
@@ -1957,7 +1984,7 @@ case 'hidetag': {
  if (!m.isGroup) return reply(mess.group)
                 if (!isAdmins && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
- if (!text) return replay(`*Please quote or write a meaningful message to tag admins to*`)
+ if (!text) return replay(`🧩*Please quote or write a meaningful message to tag admins to*`)
  let teks = `*🧩𝗚𝗿𝗼𝘂𝗽 𝗔𝗱𝗺𝗶𝗻𝘀🧩*
   
  *Message : ${text}*\n\n`
@@ -1972,7 +1999,7 @@ case 'hidetag': {
 			    
          case 'pinterest':
       case 'pin': {
-      if (!args.join(" ")) return reply(`${pushname} Please provide a search term!`);
+      if (!args.join(" ")) return reply(`🧩${pushname}Please provide a search term!`);
         reply(mess.waiting)
         let { pinterest } = require('./Gallery/lib/scraper');
         let anutrest = await pinterest(text);
@@ -1992,16 +2019,14 @@ case 'hidetag': {
         break;  
 			    
 case 'runtime': {
-Maria.sendMessage(from, { react: { text: "🔖", key: m.key }}) 
-      
-            	let lowq = `*The Bot Has Been Online For:*\n*${runtime(process.uptime())}*`
+            	let lowq = `*The Bot Has Been Online For:*\n🎉 *${runtime(process.uptime())}*`
                 reply(lowq)
             	}
             break
 			///////////////////////////////////////////////////////
 case 'igimage':
 case 'igimg':{
-if (!text) return reply("Link?")
+if (!text) return reply("🧩Link?")
 let resMaria = await fetch(`https://vihangayt.me/download/instagram?url=${text}`)
 let jsonMaria = await resMaria.json()
 Maria.sendMessage(m.chat, { image: { url: jsonMaria.data.data[0].url }, caption: mess.done}, {quoted:m})
@@ -2010,7 +2035,7 @@ Maria.sendMessage(m.chat, { image: { url: jsonMaria.data.data[0].url }, caption:
 break
 case 'igvideo':
 case 'igvid':{
-if (!q) return  reply("Link?")
+if (!q) return  reply("🧩Link?")
 let res = await fetch(`https://vihangayt.me/download/instagram?url=${q}`)
 let json = await res.json()
 Maria.sendMessage(m.chat, { video: { url: json.data.data[0].url }, caption: mess.done}, {quoted: m})
@@ -2020,7 +2045,7 @@ break
 
 case 'apk':
 case 'apkdl':{
-if (!text) return reply("What apk u wanna download?")
+if (!text) return reply("🧩What apk u wanna download?")
 let resMaria = await fetch(`https://vihangayt.me/download/apk?id=${text}`)
 let jsonMaria = await resMaria.json()
 Maria.sendMessage(from, { document: { url: jsonMaria.data.dllink}, fileName : jsonMaria.data.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
@@ -2029,8 +2054,8 @@ Maria.sendMessage(from, { document: { url: jsonMaria.data.dllink}, fileName : js
 break
 
 case 'mediafire': {
-	if (args.length == 0) return reply(`Where is the link ?`)
-	if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
+	if (args.length == 0) return reply(`🧩Where is the link ?`)
+	if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`🧩The link you provided is invalid`)
 	const { mediafireDl } = require('./Gallery/lib/mediafire.js')
 	const baby1 = await mediafireDl(text)
 	if (baby1[0].size.split('MB')[0] >= 100) return replygcxeon('Oops, the file is too big...')
@@ -2065,7 +2090,7 @@ break;
 
 
 case 'git': case 'gitclone':
-if (!args[0]) return reply(`Where is the link?\nExample :\n${prefix}${command} https://github.com/AYUSH-PANDEY023/Maria-Md `)
+if (!args[0]) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/AYUSH-PANDEY023/Maria-Md `)
 if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcMaria(`Link invalid!!`)
 let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let [, user, repo] = args[0].match(regex1) || []
@@ -2101,7 +2126,7 @@ case 'telestick':{
 				Maria.sendMessage(m.chat, { sticker: { url: mariaresources[i].url }})
 			}
 		}
-	} else reply(`Where is the telegram sticker link?\nExample. ${prefix + command} https://t.me/addstickers/FriendlyDeath`)
+	} else reply(`🧩Telegram sticker Link??\n🔮Example. ${prefix + command} https://t.me/addstickers/FriendlyDeath`)
 }
 break
 
@@ -2133,7 +2158,7 @@ case 'naturetypography':
 case 'quotesunder':
 case 'shinetext':{
 
-if (!q) return reply(`Example : ${prefix+command} Maria bot inc`) 
+if (!q) return reply(`🔮Example : ${prefix+command} Ayush`) 
 let link
 if (/stonetext/.test(command)) link = 'https://photooxy.com/online-3d-white-stone-text-effect-utility-411.html'
 if (/writeart/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/write-art-quote-on-wood-heart-370.html'
@@ -2167,6 +2192,25 @@ Maria.sendMessage(m.chat, { image: { url: dehe }, caption: `${mess.done}` }, { q
 }
 break
 
+case 'poll': {
+	if (!isCreator) return reply(mess.owner)
+            let [poll, opt] = text.split("|")
+            if (text.split("|") < 2)
+                return await reply(
+                    `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Ayush,Maria,Owner...`
+                )
+            let options = []
+            for (let i of opt.split(',')) {
+                options.push(i)
+            }
+            await Maria.sendMessage(m.chat, {
+                poll: {
+                    name: poll,
+                    values: options
+                }
+            })
+        }
+        break
 
 /////////////////////////////////////////////////////
 
